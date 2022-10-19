@@ -1,0 +1,23 @@
+.container {
+  @apply mx-auto;
+}
+
+.myemail {
+  position: relative;
+
+  &:hover {
+    &::before {
+      @apply bg-gray-200/80;
+      top: 120%;
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 110%;
+    height: 0.5px;
+    width: 100%;
+    @apply bg-gray-200/50 transition;
+  }
+}

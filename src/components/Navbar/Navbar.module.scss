@@ -1,0 +1,43 @@
+.Navbar {
+  @apply md:px-16 px-6 pt-8 fixed w-full top-0 bg-black;
+
+  & > div {
+    @apply border-b pb-6 border-gray-300/40 flex items-center justify-between;
+
+    ul {
+      @apply md:flex items-end space-x-16 hidden;
+
+      li {
+        @apply align-middle font-medium;
+
+        a {
+          @apply text-gray-300/80 transition flex items-end;
+
+          &:hover {
+            @apply text-white;
+          }
+        }
+      }
+
+      .emailMe {
+        position: relative;
+
+        a {
+          &:hover {
+            @apply text-gray-300/80;
+          }
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 170%;
+          right: 0;
+          width: 120%;
+          height: 4px;
+          @apply bg-orange-400 mb-5;
+        }
+      }
+    }
+  }
+}
